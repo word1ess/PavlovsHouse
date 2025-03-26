@@ -661,22 +661,19 @@ h1 {
 }
 .swiper-slide:has(svg) svg rect {
   stroke-width: 4;
-  stroke-dasharray: 0, 310;
-  stroke-dashoffset: 48;
   transition: 0.35s linear;
 }
 .swiper-slide:has(svg):hover rect {
   fill: none;
   stroke: rgb(255, 255, 255);
   stroke-width: 2;
-  stroke-dasharray: 422, 0;
+  stroke-dasharray: 310, 0 !important;
   transition: 1.35s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .swiper-slide:has(svg).active svg rect {
   fill: none;
   stroke: rgb(255, 255, 255);
   stroke-width: 2;
-  stroke-dasharray: 422, 0;
   transition: 0.35s linear;
 }
 
@@ -695,12 +692,11 @@ h1 {
   fill: none;
   stroke: rgb(255, 255, 255);
   stroke-width: 2;
-  stroke-dasharray: 422, 0;
   transition: 0.35s linear;
+  stroke-dasharray: 214, 48;
 }
 .btn:has(svg):hover svg rect {
   stroke-dasharray: 0, 310;
-  stroke-dashoffset: 40;
   transition: 0.35s linear;
 }
 
@@ -2134,6 +2130,10 @@ body {
   }
   .header .btn p,
   .footer .btn p {
+    display: none;
+  }
+  .header .btn svg,
+  .footer .btn svg {
     display: none;
   }
   .header .btn img,
