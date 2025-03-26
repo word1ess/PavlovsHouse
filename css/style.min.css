@@ -2111,9 +2111,10 @@ body {
     opacity: 1;
     z-index: 0;
   }
-  .header__nav > a,
+  .header__nav > a, .header__nav > a::after,
   .header__nav .header__dropdown > a,
   .footer__nav > a,
+  .footer__nav > a::after,
   .footer__nav .header__dropdown > a {
     font-weight: 400;
     font-size: 28px;
@@ -2121,6 +2122,7 @@ body {
     text-transform: uppercase;
     text-align: center;
     color: #fefefe;
+    max-height: 33.6px;
   }
   .header .btn,
   .footer .btn {
